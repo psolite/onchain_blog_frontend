@@ -3,7 +3,7 @@ import { BN, Program, web3 } from '@coral-xyz/anchor';
 import idl from './onchain_blog.json';
 import { OnchainBlog } from './onchain_blog';
 
-const network = "https://soft-dawn-bush.solana-devnet.quiknode.pro/62f9eca84a7d3e5d9afcab25f92a4914247ff5bc";
+const network = "https://api.devnet.solana.com";
 export const connection = new Connection(network, 'confirmed');
 
 export const program = new Program<OnchainBlog>(idl as OnchainBlog, {
