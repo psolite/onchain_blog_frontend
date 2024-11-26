@@ -17,7 +17,7 @@ export const createPost = async (title: string, content: string, signer: PublicK
         const timestamp = new BN(Date.now());
         const timestampBuffer = timestamp.toArrayLike(Buffer, 'le', 8);
 
-        const [postPda, bump] = web3.PublicKey.findProgramAddressSync(
+        const [postPda] = web3.PublicKey.findProgramAddressSync(
             [Buffer.from("psolite"), signer.toBuffer(), timestampBuffer],
             program.programId
         );

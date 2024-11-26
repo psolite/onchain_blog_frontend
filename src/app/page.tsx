@@ -2,7 +2,6 @@
 
 import HomePage from "@/components/pages/home";
 import { useWallet } from "@solana/wallet-adapter-react";
-import Image from "next/image";
 
 export default function Home() {
   const {publicKey} = useWallet()
