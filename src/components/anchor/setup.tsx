@@ -1,5 +1,5 @@
-import { Connection, PublicKey, Transaction, TransactionInstruction, clusterApiUrl } from '@solana/web3.js';
-import { BN, Instruction, Program, web3, Idl, AnchorProvider, setProvider, Wallet } from '@coral-xyz/anchor';
+import { Connection, PublicKey } from '@solana/web3.js';
+import { BN, Program, web3 } from '@coral-xyz/anchor';
 import idl from './onchain_blog.json';
 import { OnchainBlog } from './onchain_blog';
 

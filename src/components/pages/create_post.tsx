@@ -1,6 +1,5 @@
 "use client"
 
-import { WalletModalButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import React, { useState } from 'react';
 import { connection, createPost } from '../anchor/setup';
 import { useWallet } from '@solana/wallet-adapter-react';

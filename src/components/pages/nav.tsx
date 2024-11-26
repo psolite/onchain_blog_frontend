@@ -1,7 +1,6 @@
 "use client";
 
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import { Wallet } from 'lucide-react';
 import React from 'react';
 import Image from 'next/image';
 import { useWallet } from '@solana/wallet-adapter-react';
