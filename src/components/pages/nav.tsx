@@ -4,6 +4,7 @@ import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import React from 'react';
 import Image from 'next/image';
 import { useWallet } from '@solana/wallet-adapter-react';
+import Link from 'next/link';
 
 const NavBar: React.FC = () => {
     const { publicKey, wallet } = useWallet();
@@ -46,10 +47,10 @@ const NavBar: React.FC = () => {
                 </div>
             </nav>
             <div className="flex justify-center space-x-4 mt-3">
-                <a href="/" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Home</a>
-                <a href="/create" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Create</a>
-                <a href="/user" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">User Post</a>
-                <a href="https://x.com/0xpsoliteSol" target='blank' className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Contact</a>
+                <Link href="/" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Home</Link>
+                <Link href="/create" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Create</Link>
+                <Link href="/user" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">User Post</Link>
+                <Link href="https://x.com/0xpsoliteSol" target='blank' className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">Contact</Link>
             </div>
         </>
     );

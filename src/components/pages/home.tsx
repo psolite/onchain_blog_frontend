@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { getPosts } from '../anchor/setup';
+import Link from 'next/link';
 
 export interface Post {
     id: string;
@@ -35,25 +36,25 @@ const HomePage: React.FC<{ user?: string }> = ({ user }) => {
             {posts.map((post) => (
                 user && post.author === user ? (
                     <div key={post.id} className="bg-white p-6 rounded-lg shadow-md mt-4">
-                        <a href={`/post/${post.id}`}>
+                        <Link href={`/post/${post.id}`}>
                             <h2 className="text-2xl font-semibold mb-4">{post.title}</h2>
                             <p className="text-gray-700">{post.content.slice(0, 100)}</p>
                             <div className='flex items-center justify-between mt-4'>
                                 <p className="text-sm text-gray-500">Author: {post.author.slice(0, 4)}...{post.author.slice(-4)}</p>
                                 <p className="text-sm text-gray-500">Created At: {new Date(post.createdAt).toLocaleString()}</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 ) : (
                     <div key={post.id} className="bg-white p-6 rounded-lg shadow-md">
-                        <a href={`/post/${post.id}`}>
+                        <Link href={`/post/${post.id}`}>
                             <h2 className="text-2xl font-semibold mb-4">{post.title}</h2>
                             <p className="text-gray-700">{post.content.slice(0, 100)}</p>
                             <div className='flex items-center justify-between mt-4'>
                                 <p className="text-sm text-gray-500">Author: {post.author.slice(0, 4)}...{post.author.slice(-4)}</p>
                                 <p className="text-sm text-gray-500">Created At: {new Date(post.createdAt).toLocaleString()}</p>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 )
             ))}
